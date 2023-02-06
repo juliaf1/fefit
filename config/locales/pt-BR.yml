@@ -20,6 +20,12 @@ pt-BR:
         password: 'Senha'
         created_at: 'Criado em'
         updated_at: 'Atualizado em'
+      super_admin:
+        name: 'Nome'
+        phone: 'Telefone'
+        password: 'Senha'
+        created_at: 'Criado em'
+        updated_at: 'Atualizado em'
       address:
         street: 'Rua'
         neighborhood: 'Bairro'
@@ -29,3 +35,5 @@ pt-BR:
         complement: 'Complemento'
         reference: 'Referência'
         user: 'Cliente'
+        created_at: 'Criado em'
+        updated_at: 'Atualizado em'

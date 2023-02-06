@@ -13,10 +13,6 @@ class SuperAdminDashboard < Administrate::BaseDashboard
     password: Field::String,
     name: Field::String,
     phone: Field::String,
-    remember_created_at: Field::DateTime,
-    reset_password_sent_at: Field::DateTime,
-    reset_password_token: Field::String,
-    type: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -39,10 +35,6 @@ class SuperAdminDashboard < Administrate::BaseDashboard
     email
     name
     phone
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
-    type
     created_at
     updated_at
   ].freeze
@@ -55,10 +47,6 @@ class SuperAdminDashboard < Administrate::BaseDashboard
     password
     name
     phone
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
-    type
   ].freeze
 
   # COLLECTION_FILTERS
@@ -76,7 +64,7 @@ class SuperAdminDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how super admins are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(super_admin)
-  #   "SuperAdmin ##{super_admin.id}"
-  # end
+  def display_resource(super_admin)
+    super_admin.name
+  end
 end
