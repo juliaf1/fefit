@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'font-awesome-sass', '~> 6.2.1'
 gem 'simple_form', github: 'heartcombo/simple_form'
+gem 'autoprefixer-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
