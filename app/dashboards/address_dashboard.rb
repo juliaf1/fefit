@@ -29,8 +29,8 @@ class AddressDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     city
-    complement
     neighborhood
+    street
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
