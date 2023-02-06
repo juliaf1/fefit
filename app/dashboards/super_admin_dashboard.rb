@@ -10,7 +10,7 @@ class SuperAdminDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     email: Field::String,
-    encrypted_password: Field::String,
+    password: Field::String,
     name: Field::String,
     phone: Field::String,
     remember_created_at: Field::DateTime,
@@ -29,7 +29,6 @@ class SuperAdminDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     email
-    encrypted_password
     name
   ].freeze
 
@@ -38,7 +37,6 @@ class SuperAdminDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     email
-    encrypted_password
     name
     phone
     remember_created_at
@@ -54,7 +52,7 @@ class SuperAdminDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     email
-    encrypted_password
+    password
     name
     phone
     remember_created_at
