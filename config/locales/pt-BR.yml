@@ -1,4 +1,15 @@
 pt-BR:
+  activerecord:
+    models:
+      client:
+        one: 'Cliente'
+        other: 'Clientes'
+      super_admin:
+        one: 'Administrador'
+        other: 'Administradores'
+      address:
+        one: 'Endereço'
+        other: 'Endereços'
   helpers:
     label:
       client:
