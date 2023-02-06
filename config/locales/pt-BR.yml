@@ -1,0 +1,9 @@
+pt-BR:
+  helpers:
+    label:
+      client:
+        name: 'Nome'
+        phone: 'Telefone'
+        address: 'Endereço'
+        addresses: 'Endereços'
+        password: 'Senha'
