@@ -10,13 +10,10 @@ class ClientDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     addresses: Field::HasMany,
+    password: Field::String,
     email: Field::String,
-    encrypted_password: Field::String,
     name: Field::String,
     phone: Field::String,
-    remember_created_at: Field::DateTime,
-    reset_password_sent_at: Field::DateTime,
-    reset_password_token: Field::String,
     type: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -29,9 +26,9 @@ class ClientDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    addresses
+    name
     email
-    encrypted_password
+    phone
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -40,13 +37,8 @@ class ClientDashboard < Administrate::BaseDashboard
     id
     addresses
     email
-    encrypted_password
     name
     phone
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
-    type
     created_at
     updated_at
   ].freeze
@@ -57,13 +49,9 @@ class ClientDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     addresses
     email
-    encrypted_password
+    password
     name
     phone
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
-    type
   ].freeze
 
   # COLLECTION_FILTERS
