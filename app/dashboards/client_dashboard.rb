@@ -10,7 +10,6 @@ class ClientDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     addresses: Field::HasMany,
-    password: Field::String,
     email: Field::String,
     name: Field::String,
     phone: Field::String,
@@ -49,7 +48,6 @@ class ClientDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     addresses
     email
-    password
     name
     phone
   ].freeze
