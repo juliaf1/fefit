@@ -18,6 +18,7 @@ pt-BR:
         address: 'Endereço'
         addresses: 'Endereços'
         password: 'Senha'
+        city: 'Cidade'
         created_at: 'Criado em'
         updated_at: 'Atualizado em'
       super_admin:

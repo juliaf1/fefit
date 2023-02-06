@@ -13,7 +13,7 @@ class ClientDashboard < Administrate::BaseDashboard
     email: Field::String,
     name: Field::String,
     phone: Field::String,
-    type: Field::String,
+    city: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -28,6 +28,7 @@ class ClientDashboard < Administrate::BaseDashboard
     name
     email
     phone
+    city
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

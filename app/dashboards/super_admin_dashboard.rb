@@ -10,7 +10,7 @@ class SuperAdminDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     email: Field::String,
-    password: Field::String,
+    password: Field::Password,
     name: Field::String,
     phone: Field::String,
     created_at: Field::DateTime,
