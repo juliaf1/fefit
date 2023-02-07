@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_07_211533) do
+ActiveRecord::Schema.define(version: 2023_02_07_212205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,19 +63,8 @@ ActiveRecord::Schema.define(version: 2023_02_07_211533) do
     t.string "photo_url"
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.boolean "express", default: false, null: false
-    t.date "date"
-    t.float "total_price"
-    t.bigint "coupon_id"
-    t.bigint "user_id", null: false
-    t.bigint "address_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["address_id"], name: "index_orders_on_address_id"
-    t.index ["coupon_id"], name: "index_orders_on_coupon_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
-  end
+# Could not dump table "orders" because of following StandardError
+#   Unknown type 'order_status' for column 'status'
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
