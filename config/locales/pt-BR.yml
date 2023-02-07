@@ -19,6 +19,9 @@ pt-BR:
       coupon:
         one: 'Cupom'
         other: 'Cupons'
+      order:
+        one: 'Pedido'
+        other: 'Pedidos'
   helpers:
     label:
       client:
@@ -69,3 +72,13 @@ pt-BR:
         user_id: 'Administrador'
         total_uses: 'Limite de ativações'
         total_used: 'Ativações feitas'
+      order:
+        express: 'Delivery Express?'
+        date: 'Data da Entrega'
+        total_price: 'Valor Total'
+        coupon: 'Cupom'
+        coupon_id: 'Cupom'
+        user: 'Cliente'
+        user_id: 'Cliente'
+        address: 'Endereço'
+        address_id: 'Endereço'

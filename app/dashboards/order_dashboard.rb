@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class CouponDashboard < Administrate::BaseDashboard
+class OrderDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,9 +9,12 @@ class CouponDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    code: Field::String,
-    total_used: Field::Number,
-    total_uses: Field::Number,
+    address: Field::BelongsTo,
+    coupon: Field::BelongsTo,
+    date: Field::Date,
+    express: Field::Boolean,
+    status: Field::Select.with_options(searchable: false, collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys }),
+    total_price: Field::Number.with_options(decimals: 2),
     user: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -24,19 +27,23 @@ class CouponDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    code
-    total_uses
-    total_used
+    user
+    total_price
+    status
+    date
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
-    code
-    total_uses
-    total_used
     user
+    address
+    date
+    express
+    status
+    coupon
+    total_price
     created_at
     updated_at
   ].freeze
@@ -45,8 +52,13 @@ class CouponDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    code
-    total_uses
+    user
+    address
+    date
+    express
+    coupon
+    status
+    total_price
   ].freeze
 
   # COLLECTION_FILTERS
@@ -61,10 +73,10 @@ class CouponDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how coupons are displayed
+  # Overwrite this method to customize how orders are displayed
   # across all pages of the admin dashboard.
   #
-  def display_resource(coupon)
-    coupon.code
+  def display_resource(order)
+    "Pedido ##{order.id}"
   end
 end

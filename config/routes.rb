@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :meals
       resources :cart_meals
       resources :coupons
+      resources :orders
 
       root to: "clients#index"
     end
