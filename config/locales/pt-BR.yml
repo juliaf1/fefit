@@ -10,6 +10,12 @@ pt-BR:
       address:
         one: 'Endereço'
         other: 'Endereços'
+      meal:
+        one: 'Refeição'
+        other: 'Refeições'
+      cart_meals:
+        one: 'Refeição do Carrinho'
+        other: 'Refeições do Carrinho'
   helpers:
     label:
       client:
@@ -38,3 +44,12 @@ pt-BR:
         user: 'Cliente'
         created_at: 'Criado em'
         updated_at: 'Atualizado em'
+      meal:
+        name: 'Nome'
+        description: 'Descrição'
+        price: 'Preço'
+        veggie: 'Vegetariano?'
+        vegan: 'Vegano?'
+        hot: 'Quentinha?'
+        units: 'Unidades Disponíveis'
+        photo_url: 'URL da Foto'

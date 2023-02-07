@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :clients
       resources :super_admins
       resources :addresses
+      resources :meals
 
       root to: "clients#index"
     end
