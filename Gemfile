@@ -27,6 +27,7 @@ gem 'font-awesome-sass', '~> 6.2.1'
 gem 'simple_form', github: 'heartcombo/simple_form'
 gem 'autoprefixer-rails'
 gem 'administrate'
+gem 'httparty'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
