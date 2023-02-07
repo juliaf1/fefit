@@ -16,6 +16,9 @@ pt-BR:
       cart_meal:
         one: 'Refeição do Carrinho'
         other: 'Refeições do Carrinho'
+      coupon:
+        one: 'Cupom'
+        other: 'Cupons'
   helpers:
     label:
       client:
@@ -60,3 +63,9 @@ pt-BR:
         units: 'Unidades'
         meal_id: 'Refeição'
         user_id: 'Cliente'
+      coupon:
+        code: 'Código'
+        user: 'Administrador'
+        user_id: 'Administrador'
+        total_uses: 'Limite de ativações'
+        total_used: 'Ativações feitas'
