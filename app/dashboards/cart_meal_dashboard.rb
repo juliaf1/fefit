@@ -24,8 +24,8 @@ class CartMealDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     meal
-    units
     user
+    units
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -33,8 +33,8 @@ class CartMealDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     meal
-    units
     user
+    units
     created_at
     updated_at
   ].freeze
@@ -44,8 +44,8 @@ class CartMealDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     meal
-    units
     user
+    units
   ].freeze
 
   # COLLECTION_FILTERS
@@ -63,7 +63,7 @@ class CartMealDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how cart meals are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(cart_meal)
-  #   "CartMeal ##{cart_meal.id}"
-  # end
+  def display_resource(cart_meal)
+    "#{cart_meal.user.name} - #{cart_meal.meal.name}"
+  end
 end
