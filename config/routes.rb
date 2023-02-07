@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :super_admins
       resources :addresses
       resources :meals
+      resources :cart_meals
 
       root to: "clients#index"
     end

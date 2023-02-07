@@ -13,7 +13,7 @@ pt-BR:
       meal:
         one: 'Refeição'
         other: 'Refeições'
-      cart_meals:
+      cart_meal:
         one: 'Refeição do Carrinho'
         other: 'Refeições do Carrinho'
   helpers:
@@ -42,6 +42,7 @@ pt-BR:
         complement: 'Complemento'
         reference: 'Referência'
         user: 'Cliente'
+        user_id: 'Cliente'
         created_at: 'Criado em'
         updated_at: 'Atualizado em'
       meal:
@@ -53,3 +54,9 @@ pt-BR:
         hot: 'Quentinha?'
         units: 'Unidades Disponíveis'
         photo_url: 'URL da Foto'
+      cart_meal:
+        meal: 'Refeição'
+        user: 'Cliente'
+        units: 'Unidades'
+        meal_id: 'Refeição'
+        user_id: 'Cliente'
