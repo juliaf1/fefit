@@ -10,6 +10,7 @@ class AddressDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     city: Field::String,
+    number: Field::String,
     complement: Field::String,
     neighborhood: Field::String,
     reference: Field::String,
@@ -37,14 +38,15 @@ class AddressDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
-    city
-    complement
-    neighborhood
-    reference
     state
-    street
-    user
+    city
+    neighborhood
     zipcode
+    street
+    number
+    complement
+    reference
+    user
     created_at
     updated_at
   ].freeze
@@ -53,12 +55,14 @@ class AddressDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    city
-    complement
-    neighborhood
-    reference
     state
+    city
+    neighborhood
+    zipcode
     street
+    number
+    complement
+    reference
     user
     zipcode
   ].freeze
