@@ -43,17 +43,17 @@ module LocationManager
       response = HTTParty.get("#{API_BASE_URL}/#{@zipcode}")
 
       if response.code == 200
-        address = response.body
+        address = JSON.parse(response.body)
 
-        if AVAILABLE_LOCATIONS[:macae][:available_areas].include?(address.neighborhood)
+        if AVAILABLE_LOCATIONS[:macae][:available_areas].include?(address['neighborhood'])
           return {
             success: true,
             address: {
-              zipcode: address.cep,
-              state: address.state,
-              city: address.city,
-              neighborhood: address.neighborhood,
-              street: address.street,
+              zipcode: address['cep'],
+              state: address['state'],
+              city: address['city'],
+              neighborhood: address['neighborhood'],
+              street: address['street'],
             }
           }
         else
@@ -73,7 +73,7 @@ module LocationManager
         return {
           success: true,
           address: {
-            zipcode: zipcode,
+            zipcode: @zipcode,
             state: 'RJ',
             city: 'Armação dos Búzios',
             neighborhood: 'Búzios - CEP Geral',
@@ -83,18 +83,17 @@ module LocationManager
 
       response = HTTParty.get("#{API_BASE_URL}/#{@zipcode}")
 
-      puts response
-  
       if response.code == 200
-        address = response.body
+        address = JSON.parse(response.body)
+  
         return {
           success: true,
           address: {
-            zipcode: address.cep,
-            state: address.state,
-            city: address.city,
-            neighborhood: address.neighborhood,
-            street: address.street,
+            zipcode: address['cep'],
+            state: address['state'],
+            city: address['city'],
+            neighborhood: address['neighborhood'],
+            street: address['street'],
           }
         }
       else
@@ -105,7 +104,7 @@ module LocationManager
     end
 
     def clean_zipcode(zipcode)
-      return zipcode.gsub(/[^a-zA-Z0-9 ]/, '')
+      return zipcode.gsub(/[^a-zA-Z0-9 ]/, '').gsub(' ', '')
     end
 
   end
