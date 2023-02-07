@@ -47,7 +47,6 @@ class CouponDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     code
     total_uses
-    total_used
   ].freeze
 
   # COLLECTION_FILTERS
