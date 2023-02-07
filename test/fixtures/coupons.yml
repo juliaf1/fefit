@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  total_uses: 1
+  total_used: 1
+  user: one
+
+two:
+  code: MyString
+  total_uses: 1
+  total_used: 1
+  user: two
